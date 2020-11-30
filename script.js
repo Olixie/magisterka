@@ -1,8 +1,8 @@
 var imagesArray = ["1.jpg", "11.jpg", "2.jepg", "22.jpg", "3.jpg", "4.png", "44.png"];
 //tablica z normalnymi reklamami
-var imagesNormalArray = ["1.jpg", "2.jpg", "3.png", "4.PNG", "5.jpg", "6.jpg", "7.png", "8.png", "9.jpg", "10.jpg", "11_2.png"];
+var imagesNormalArray = ["1.jpg", "2.jpg", "3.PNG", "4.PNG", "5.jpg", "6.jpg", "7.png", "8.png", "9.jpg", "10.jpg", "11_2.PNG"];
 //tablica z komiksami
-var imagesComicsArray = ["11.png", "22.png", "33.png", "44.png", "55.png", "66.jpg", "77.jpg", "88.png", "99.jpg", "1010.png", "1111.png"];
+var imagesComicsArray = ["11.png", "22.png", "33.png", "44.png", "55.png", "66.jpg", "77.jpg", "88.png", "99.jpg", "1010.PNG", "1111.png"];
 //tablica z wspolnymi
 var imagesMixArray = ["111.jpg", "666.jpg", "777.jpg", "888.png"];
 //tablica wynik
