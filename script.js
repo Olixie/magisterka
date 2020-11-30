@@ -356,7 +356,7 @@ document.addEventListener('DOMContentLoaded', function () {
             
             console.log("nowa strona");
             //window.location.href="E:/Magister/end.html";
-            window.location.replace("http://127.0.0.1:8080/end.html");
+            window.location.replace("https://olixie.github.io/magisterka/end.html");
 
         }
 
