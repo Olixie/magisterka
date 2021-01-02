@@ -566,7 +566,7 @@ document.addEventListener('DOMContentLoaded', function () {
         else if(countButton == 58){
             document.getElementById("canvas3").style.display = "none";
             document.getElementById("canvas1").src = 'obrazy/59.jpg';
-            document.getElementById("canvas2").src = 'obrazy/54-54.jpg';
+            document.getElementById("canvas2").src = 'obrazy/59-59.jpg';
         }
         else if(countButton == 59){
             document.getElementById("canvas3").style.display = "none";
