@@ -711,7 +711,7 @@ document.addEventListener('DOMContentLoaded', function () {
         else if(countButton == 87){
             document.getElementById("canvas3").style.display = "none";
             document.getElementById("canvas1").src = 'obrazy/88.jpg';
-            document.getElementById("canvas2").src = 'obrazy/82-82.jpg';
+            document.getElementById("canvas2").src = 'obrazy/88-88.jpg';
         }
         else if(countButton == 88){
             document.getElementById("canvas3").style.display = "none";
