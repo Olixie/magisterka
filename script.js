@@ -729,7 +729,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if(countButton == 0 || countButton == 3 || countButton == 6 || countButton == 7 || countButton == 9 || countButton == 12 || countButton == 14 || countButton == 15 || countButton == 16 || countButton == 21 || countButton == 29 || countButton == 39 || countButton == 42 || countButton == 46 || countButton == 51 || countButton == 53 || countButton == 56 || countButton == 57 || countButton == 58 || countButton == 61){
             document.getElementById("canvas1").style.width = "420px";
             document.getElementById("canvas2").style.width = "420px";
-        }else if(countButton == 48){
+        }else if(countButton == 48 || countButton == 87){
             document.getElementById("canvas1").style.width = "400px";
             document.getElementById("canvas2").style.width = "400px";
         }else if(countButton == 59 || countButton == 70 || countButton == 73 || countButton == 75 || countButton == 79){
