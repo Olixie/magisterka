@@ -773,7 +773,7 @@ async function sendResultData() {
         "czas1": czasBadanego_div1,
         "czas2": czasBadanego_div2,
         "czas3": czasBadanego_div3,
-        "heat_map": heatMapCoordinates
+        "heat_map": JSON.stringify(heatMapCoordinates)
     }
     console.log(myObj);
     console.log(wynikBadanego);
