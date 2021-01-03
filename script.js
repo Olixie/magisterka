@@ -719,11 +719,8 @@ document.addEventListener('DOMContentLoaded', function () {
             document.getElementById("canvas2").src = 'obrazy/89-89.jpg';
         }
         else if(countButton == 89){
-            
+            sendResultToServer();
             console.log("nowa strona");
-            //window.location.href="E:/Magister/end.html";
-            window.location.replace("https://olixie.github.io/magisterka/end.html");
-
         }
 
         if(countButton == 0 || countButton == 3 || countButton == 6 || countButton == 7 || countButton == 9 || countButton == 12 || countButton == 14 || countButton == 15 || countButton == 16 || countButton == 21 || countButton == 29 || countButton == 39 || countButton == 42 || countButton == 46 || countButton == 51 || countButton == 53 || countButton == 56 || countButton == 57 || countButton == 58 || countButton == 61){
@@ -760,3 +757,45 @@ document.addEventListener('DOMContentLoaded', function () {
 
     
 });
+async function sendResultData() {
+    var timestamp = new Date();
+    var hashNick = btoa(unescape(encodeURIComponent(timestamp)));
+    //console.log("nick: ", JSON.stringify(timestamp));
+    //localStorage.setItem("nick", JSON.stringify(timestamp));
+    //Odszyfrowanie
+    var str2 = decodeURIComponent(escape(window.atob(hashNick)));
+    console.log(str2);
+
+    var myObj = {
+        "nick": hashNick,
+        "images": wynikBadanego,
+        "lista_img": listaObrazow,
+        "czas1": czasBadanego_div1,
+        "czas2": czasBadanego_div2,
+        "czas3": czasBadanego_div3,
+        "heat_map": heatMapCoordinates
+    }
+    console.log(myObj);
+    console.log(wynikBadanego);
+    console.log(listaObrazow);
+    console.log(czasBadanego_div1);
+    console.log(czasBadanego_div2);
+    console.log(czasBadanego_div3);
+
+    let response = await fetch('https://experiment-advertisement.herokuapp.com/api/data/save', {
+        method: 'post',
+        headers: {
+            'Accept': 'application/json, text/plain, /',
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(myObj)
+    });
+    let data = await response.json()
+    return data;
+}
+
+function sendResultToServer() {
+    console.log("wyslano dane");
+    sendResultData().then(data => {console.log(data); window.location.replace("https://olixie.github.io/magisterka/end.html")}).catch(error=> console.log(error));
+    
+}
